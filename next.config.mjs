@@ -1,8 +1,8 @@
-import nextMDX from '@next/mdx'
+import nextMDX from "@next/mdx";
 
-import { recmaPlugins } from './mdx/recma.mjs'
-import { rehypePlugins } from './mdx/rehype.mjs'
-import { remarkPlugins } from './mdx/remark.mjs'
+import { recmaPlugins } from "./mdx/recma.mjs";
+import { rehypePlugins } from "./mdx/rehype.mjs";
+import { remarkPlugins } from "./mdx/remark.mjs";
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -11,11 +11,16 @@ const withMDX = nextMDX({
     rehypePlugins,
     recmaPlugins,
   },
-})
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
-}
+  pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
+  output: "export",
+  distDir: "_static",
+  images: {
+    unoptimized: true,
+  },
+};
 
-export default withMDX(nextConfig)
+export default withMDX(nextConfig);
