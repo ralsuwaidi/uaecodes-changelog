@@ -21,9 +21,9 @@ const monaSans = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Commit - Open-source Git client for macOS minimalists',
+  title: 'UAECodes - UAE Code celebration day',
   description:
-    'Commit is a lightweight Git client you can open from anywhere any time you’re ready to commit your work with a single keyboard shortcut. It’s fast, beautiful, and completely unnecessary.',
+    'The «UAE Codes» Day is an annual event to celebrate coding in the UAE. It is a day to bring together the community of developers, designers, and entrepreneurs to share their knowledge and experience.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
