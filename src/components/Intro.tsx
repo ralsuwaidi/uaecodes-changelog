@@ -98,13 +98,56 @@ export function Intro() {
         >
           Participate
         </IconLink>
+        <IconLink href="/learn" icon={ExploreIcon} className="flex-none">
+          Learn
+        </IconLink>
+      </div>
+    </>
+  );
+}
+
+export function LearnIntro() {
+  return (
+    <>
+      <div>
+        <Link href="/">
+          <Logo className="inline-block h-8 w-auto" width={160} height={160} />
+        </Link>
+      </div>
+      <h1 className="mt-14 font-display text-4xl/tight font-light text-white">
+        Learn coding to{" "}
+        <span className="text-sky-300">ignite your programming skill</span>
+      </h1>
+      <p className="mt-4 text-sm/6 text-gray-300">
+        The UAE Codes Day is a yearly event and key part of the National Program
+        for Coders. Initiated by His Highness{" "}
+        <a href="https://www.youtube.com/watch?v=EnS_kT48aFg">
+          <span className="text-sky-300 underline">
+            Sheikh Mohammed bin Rashid Al Maktoum
+          </span>
+        </a>{" "}
+        , this program, launched on July 10th, 2021, aims to position the UAE as
+        a leading force in coding and digital innovation.
+      </p>
+      <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink
-          href="http://chat.codershq.ae"
-          icon={ExploreIcon}
-          className="flex-none"
+          href="https://ai.gov.ae/wp-content/uploads/2023/10/UAE-CODES-GUIDE-2023-ENGLISH.pdf"
+          icon={BookIcon}
           target="_blank"
+          className="flex-none"
         >
-          Explore
+          Guide
+        </IconLink>
+        <IconLink
+          href="https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=Marketing&origin=NeoPortalPage&subpage=design&id=IO3LosEDp0SimGTNnPdGVvzwbnHh8p5Ho1NdMiHPEmZUQUNOUFo0VDEwMEZDQlpGRUxVUkM2MzZaSSQlQCN0PWcu"
+          icon={FormIcon}
+          target="_blank"
+          className="flex-none"
+        >
+          Participate
+        </IconLink>
+        <IconLink href="/" icon={ExploreIcon} className="flex-none">
+          Home
         </IconLink>
       </div>
     </>
