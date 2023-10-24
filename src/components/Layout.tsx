@@ -115,7 +115,6 @@ export function IntroLayout({ children }: { children: React.ReactNode }) {
       <FixedSidebar main={<LearnIntro />} footer={<IntroFooter />} />
       <ThemeToggle />
       <div className="relative flex-auto">
-        <Timeline />
         <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
           {children}
         </main>

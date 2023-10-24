@@ -12,6 +12,40 @@ function BookIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   );
 }
 
+function CodeIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      {...props}
+    >
+      <path
+        fill-rule="evenodd"
+        d="M3 6a3 3 0 013-3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6zm14.25 6a.75.75 0 01-.22.53l-2.25 2.25a.75.75 0 11-1.06-1.06L15.44 12l-1.72-1.72a.75.75 0 111.06-1.06l2.25 2.25c.141.14.22.331.22.53zm-10.28-.53a.75.75 0 000 1.06l2.25 2.25a.75.75 0 101.06-1.06L8.56 12l1.72-1.72a.75.75 0 10-1.06-1.06l-2.25 2.25z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
+}
+
+function ChatIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      {...props}
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  );
+}
+
 function FormIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg
@@ -119,32 +153,27 @@ export function LearnIntro() {
         <span className="text-sky-300">ignite your programming skill</span>
       </h1>
       <p className="mt-4 text-sm/6 text-gray-300">
-        The UAE Codes Day is a yearly event and key part of the National Program
-        for Coders. Initiated by His Highness{" "}
-        <a href="https://www.youtube.com/watch?v=EnS_kT48aFg">
-          <span className="text-sky-300 underline">
-            Sheikh Mohammed bin Rashid Al Maktoum
-          </span>
-        </a>{" "}
-        , this program, launched on July 10th, 2021, aims to position the UAE as
-        a leading force in coding and digital innovation.
+        Scroll down to explore the exciting realm of programming. With coding
+        skills, your imagination is your limit. You have the potential to create
+        sophisticated software applications, captivating websites, and engaging
+        games. Dive into this world powered by logic and creativity.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-x-1 gap-y-3 sm:gap-x-2 lg:justify-start">
         <IconLink
-          href="https://ai.gov.ae/wp-content/uploads/2023/10/UAE-CODES-GUIDE-2023-ENGLISH.pdf"
-          icon={BookIcon}
+          href="https://chat.codershq.ae"
+          icon={ChatIcon}
           target="_blank"
           className="flex-none"
         >
-          Guide
+          Gen AI
         </IconLink>
         <IconLink
-          href="https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=Marketing&origin=NeoPortalPage&subpage=design&id=IO3LosEDp0SimGTNnPdGVvzwbnHh8p5Ho1NdMiHPEmZUQUNOUFo0VDEwMEZDQlpGRUxVUkM2MzZaSSQlQCN0PWcu"
-          icon={FormIcon}
+          href="https://uaecodes.github.io/uaecodes/"
+          icon={CodeIcon}
           target="_blank"
           className="flex-none"
         >
-          Participate
+          One Line
         </IconLink>
         <IconLink href="/" icon={ExploreIcon} className="flex-none">
           Home

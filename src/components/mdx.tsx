@@ -50,12 +50,17 @@ function ArticleHeader({ id, date }: { id: string; date: string | Date }) {
   
   // Check if the date is October 29
   const isSpecialDate = dateObject.getDate() === 29 && dateObject.getMonth() === 9;
+
+  const isNoDate = dateObject.getFullYear() === 2000;
+
+  console.log(isNoDate);
   
   // Set the conditional class name based on whether it is a special date or not
   const specialClassName = isSpecialDate ? 'text-orange-600 dark:text-orange-400' : '';
 
   return (
     <header className="relative mb-10 xl:mb-0">
+        {!isNoDate && ( 
       <div className="pointer-events-none absolute left-[max(-0.5rem,calc(50%-18.625rem))] top-0 z-50 flex h-4 items-center justify-end gap-x-2 lg:left-0 lg:right-[calc(max(2rem,50%-38rem)+40rem)] lg:min-w-[32rem] xl:h-8">
         <Link href={`#${id}`} className="inline-flex">
           <FormattedDate
@@ -65,14 +70,16 @@ function ArticleHeader({ id, date }: { id: string; date: string | Date }) {
         </Link>
         <div className="h-[0.0625rem] w-3.5 bg-gray-400 lg:-mr-3.5 xl:mr-0 xl:bg-gray-300" />
       </div>
+        )}
       <ContentWrapper>
         <div className="flex">
-          <Link href={`#${id}`} className="inline-flex">
+          {!isNoDate && (<Link href={`#${id}`} className="inline-flex">
             <FormattedDate
               date={dateObject}
               className={`text-2xs/4 font-medium text-gray-500 dark:text-white/50 xl:hidden ${specialClassName}`}
             />
-          </Link>
+          </Link>)
+          }
         </div>
       </ContentWrapper>
     </header>
