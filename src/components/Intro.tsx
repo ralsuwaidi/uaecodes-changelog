@@ -125,7 +125,7 @@ export function Intro() {
           Guide
         </IconLink>
         <IconLink
-          href="https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=Marketing&origin=NeoPortalPage&subpage=design&id=IO3LosEDp0SimGTNnPdGVvzwbnHh8p5Ho1NdMiHPEmZUQUNOUFo0VDEwMEZDQlpGRUxVUkM2MzZaSSQlQCN0PWcu"
+          href="https://forms.office.com/r/XJ7mc3zxEG"
           icon={FormIcon}
           target="_blank"
           className="flex-none"
