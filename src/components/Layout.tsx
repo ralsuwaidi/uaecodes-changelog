@@ -1,6 +1,6 @@
 import { useId } from "react";
 
-import { Intro, IntroFooter } from "@/components/Intro";
+import { Intro, IntroFooter, LearnIntro } from "@/components/Intro";
 import { StarField } from "@/components/StarField";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
@@ -98,6 +98,21 @@ export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <FixedSidebar main={<Intro />} footer={<IntroFooter />} />
+      <ThemeToggle />
+      <div className="relative flex-auto">
+        <Timeline />
+        <main className="space-y-20 py-20 sm:space-y-32 sm:py-32">
+          {children}
+        </main>
+      </div>
+    </>
+  );
+}
+
+export function IntroLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <FixedSidebar main={<LearnIntro />} footer={<IntroFooter />} />
       <ThemeToggle />
       <div className="relative flex-auto">
         <Timeline />
