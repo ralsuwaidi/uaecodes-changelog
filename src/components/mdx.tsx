@@ -53,8 +53,6 @@ function ArticleHeader({ id, date }: { id: string; date: string | Date }) {
 
   const isNoDate = dateObject.getFullYear() === 2000;
 
-  console.log(isNoDate);
-  
   // Set the conditional class name based on whether it is a special date or not
   const specialClassName = isSpecialDate ? 'text-orange-600 dark:text-orange-400' : '';
 
