@@ -8,6 +8,7 @@ import { Fragment, useState } from "react";
 import { Transition } from "@headlessui/react";
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
 import { XMarkIcon } from "@heroicons/react/20/solid";
+import SimpleSnackbar from "./SnackBar";
 
 interface Props {
   show: boolean;
@@ -94,7 +95,7 @@ export function SignUpForm() {
       className="relative isolate mt-8 flex items-center pr-1"
       onSubmit={handleSubmit}
     >
-      <FormNotification show={show} setShow={setShow} />
+      <SimpleSnackbar open={show} setOpen={setShow} />
       <label htmlFor={id} className="sr-only">
         Email address
       </label>
